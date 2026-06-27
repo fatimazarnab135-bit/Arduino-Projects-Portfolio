@@ -1,0 +1,29 @@
+Time Reaction Game:
+
+Description:
+This project is a reaction speed testing game developed using Arduino. The player must respond as quickly as possible when the signal is given.
+
+Features:
+Reaction time measurement
+LED indication
+Buzzer notification
+Interactive gameplay
+
+Components Used:
+Arduino Uno
+Push Button
+LED
+Buzzer
+Resistor
+Breadboard
+
+WORKING PRINCIPLE:
+The system waits for a random period before activating the signal. The player presses the button as quickly as possible, and the reaction time is measured.
+
+Applications:
+Reaction speed testing
+Educational projects
+Arduino learning activities
+
+Author:
+Zarnab Fatima

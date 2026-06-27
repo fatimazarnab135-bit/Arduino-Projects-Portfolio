@@ -1,0 +1,20 @@
+🔌 Connections (Wiring):
+JOYSTICK DIRECTION GAME:
+🎮 Joystick Module:
+VCC → 5V
+GND → GND
+VRx → A0
+VRy → A1
+SW → D2 (optional, use nahi bhi kar sakti)
+👆 Touch Sensor (Start Button):
+VCC → 5V
+GND → GND
+OUT → D3
+💡 LEDs:
+Red LED (+) → D8 (through 220Ω resistor)
+Yellow LED (+) → D9 (through 220Ω resistor)
+Green LED (+) → D10 (through 220Ω resistor)
+All LED (-) → GND
+🔊 Buzzer:
++ → D11
+- → GND

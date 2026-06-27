@@ -1,0 +1,18 @@
+Pin Plan:
+Smart parking system:
+LEDs:
+Green LED → Pin 2
+Yellow LED → Pin 3
+Red LED → Pin 4
+Buzzer:
+Buzzer + → Pin 8
+Buzzer − → GND
+Ultrasonic Sensor:
+VCC → 5V
+GND → GND
+TRIG → Pin 9
+ECHO → Pin 10
+D2 ─ Resistor ─ Green LED ─ GND
+D3 ─ Resistor ─ Yellow LED ─ GND
+D4 ─ Resistor ─ Red LED ─ GND
+arduino ground ---- breadboard common ground rail

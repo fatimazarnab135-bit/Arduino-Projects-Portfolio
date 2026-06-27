@@ -1,0 +1,18 @@
+pin connections:
+Soil moisture detection sensor:
+Soil moisture sensor:
+VCC ---- 5V(Arduino)
+GND ---- GND
+AO -----A0
+Red LED (Dry Indication):
+Arduino Pin 8 ---- 220 ohm resistor --- LED+
+LED- ---- GND
+Green LED(WET INDICATION):
+Arduino pin 7 ---- 220 om resistor --- LED+
+LED- ---- GND
+Buzzer
+(positive) --- Arduino pin 9
+(negative) --- GND
+Logic Reminder:
+Reading > 700 --- DRY --- RED LED + BUZZER ON
+Reading <=700 ---WET ----WET --- GREEN LED ON

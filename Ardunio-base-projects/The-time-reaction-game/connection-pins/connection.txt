@@ -1,0 +1,10 @@
+Connection pins:
+The Time Reaction Game:
+Pin 8 → 220Ω resistor → LED + 
+ LED − → GND  
+🔊 Buzzer Pin 9 → Buzzer + 
+ Buzzer − → GND 
+🔘 Button 5V → button side 1 
+ button side 2 → Pin 2 
+ Pin 2 → 10kΩ → GND 
+Arduino uno ground ----- common ground  

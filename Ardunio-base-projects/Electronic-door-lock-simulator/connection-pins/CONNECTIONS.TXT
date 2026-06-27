@@ -1,0 +1,38 @@
+🔌 CONNECTIONS (ARDUINO UNO):
+ELECTRONIC DOOR LOCK SIMULATOR:
+🔘 Buttons (9 total):
+
+Each button:
+
+One side → Arduino pin
+Other side → GND
+Button 1 → D2
+Button 2 → D3
+Button 3 → D4
+Button 4 → D5
+Button 5 → D6
+Button 6 → D7
+Button 7 → D8
+Button 8 → D9
+Button 9 → D10
+
+👉 All other sides of buttons → Common GND
+
+💡 LEDs:
+Green LED (Access Granted):
+- + → D11 (through 220Ω resistor)
+- - → GND
+
+Red LED (Wrong attempt):
+- + → D12 (through 220Ω resistor)
+- - → GND
+
+Yellow LED (System Lock):
+- + → A0 (through 220Ω resistor)
+- - → GND
+🔊 Buzzer:
+Buzzer +
+→ D13
+
+Buzzer -
+→ GND

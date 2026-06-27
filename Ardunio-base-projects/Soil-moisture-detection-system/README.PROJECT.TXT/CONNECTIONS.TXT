@@ -1,0 +1,29 @@
+Soil Moisture Detection System:
+
+Description:
+This Arduino-based project monitors soil moisture levels and helps determine when plants need watering.
+
+Features:
+Soil moisture measurement
+Real-time monitoring
+Water level indication
+Simple and cost-effective design
+
+Components Used:
+Arduino Uno
+Soil Moisture Sensor
+LEDs
+Jumper Wires
+Breadboard
+
+Working Principle:
+The soil moisture sensor measures the water content in the soil. Based on the moisture level, the system indicates whether the soil is wet, moist, or dry.
+
+Applications:
+Smart irrigation systems
+Agriculture
+Gardening
+Plant monitoring
+
+Author:
+Zarnab Fatima
