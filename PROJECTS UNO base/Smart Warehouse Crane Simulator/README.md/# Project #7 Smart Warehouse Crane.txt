@@ -1,0 +1,57 @@
+# Project #7: Smart Warehouse Crane Simulator with Task Validation System
+
+An industrial-grade embedded simulation project developed on an **Arduino Uno**. This project replicates a smart warehouse overhead crane system equipped with multi-axis joystick positioning, capacitive touch detection, manual control triggers, and audiovisual task validation feedback.
+
+---
+
+## Features & Working Logic
+
+* **2-Axis Crane Control (Analog Joystick):** Uses X-axis (`A0`) and Y-axis (`A1`) inputs for smooth positional targeting.
+* **Emergency Stop / Interlock (Joystick Push Button & Touch Sensor):** Integrated capacitive touch sensor and tactile switch for immediate manual overriding or safety lockouts.
+* **Task Validation Engine (Main Push Button):** Tactile controller button (`Pin 10` with `INPUT_PULLUP`) initializes, steps through, and validates warehouse cargo placement tasks.
+* **Audiovisual Telemetry & Status Indicators:**
+  * **Red LED (Pin 6):** Indicates Crane Motion / Active Operation.
+  * **Green LED (Pin 7):** Indicates Stationary / Ready State.
+  * **Yellow LED (Pin 9):** Displays Task Validation / Target Reached Results.
+  * **Active Buzzer (Pin 8):** Provides acoustic feedback for movement ticks, task completion, and error alerts.
+
+---
+
+## Master Pin Mapping (Arduino Uno)
+
+### 1. Analog Inputs & Control Controls
+| Component | Pin / Terminal | Connected To | Notes / Function |
+| :--- | :--- | :--- | :--- |
+| **Joystick Module** | VCC / GND | 5V / GND | Module Power Supply |
+| | VRX | **Pin A0** | X-Axis Motion Control |
+| | VRY | **Pin A1** | Y-Axis Motion Control |
+| | SW | **Pin D2** | Joystick Push Button (Select/Emergency) |
+| **Touch Sensor** | VCC / GND / OUT | 5V / GND / **Pin D3** | Capacitive Safety Interlock |
+| **Task Push Button** | Terminal 1 / Terminal 2 | **Pin D10** / GND | Task Start/End (`INPUT_PULLUP`, No external resistor) |
+
+### 2. Audiovisual Indicators
+
+| Component | Pin / Terminal | Connected To | Notes / Function |
+| :--- | :--- | :--- | :--- |
+| **Red LED** | Anode (+) / Cathode (-) | **Pin D6** (via 220Ω) / GND | Moving / Active Crane Indicator |
+| **Green LED** | Anode (+) / Cathode (-) | **Pin D7** (via 220Ω) / GND | Stop / Stationary State Indicator |
+| **Yellow LED** | Anode (+) / Cathode (-) | **Pin D9** (via 220Ω) / GND | Task Result / Validation Indicator |
+| **Active Buzzer** | Positive (+) / Negative (-) | **Pin D8** / GND | Operational Sound & Alarm System |
+
+---
+
+## Circuit & Hardware Setup
+
+* Add your project hardware photos or video clips in the `assets/` sub-folder:
+  * `assets/circuit-diagram.png`
+  * `assets/working-demo.mp4`
+
+---
+
+## How to Run
+
+1. Open the project code file (`src/project_code.ino` or `.ino` file) in **Arduino IDE**.
+2. Connect your **Arduino Uno** to your computer via USB.
+3. Select board **Arduino Uno** and your correct **COM Port**.
+4. Click **Upload**.
+5. Open **Serial Monitor** at `9600` baud rate to inspect real-time joystick coordinates and task validation logs.

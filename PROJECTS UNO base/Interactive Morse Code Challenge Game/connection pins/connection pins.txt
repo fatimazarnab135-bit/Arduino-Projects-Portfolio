@@ -1,0 +1,35 @@
+=========================================================
+      PROJECT #10 MASTER PIN MAP (ARDUINO UNO)
+=========================================================
+
+1. POWER INFRASTRUCTURE
+- Arduino 5V  -> Breadboard Red Line (+5V)
+- Arduino GND -> Breadboard Blue Line (GND)
+
+2. ULTRASONIC SENSOR (HC-SR04) [Gesture Telegraph Key]
+- VCC  -> Breadboard (+5V)
+- GND  -> Breadboard (GND)
+- TRIG -> Arduino Digital Pin 3
+- ECHO -> Arduino Digital Pin 4
+
+3. PUSH BUTTON [Challenge Generator / Step Button]
+- Pin 1 -> Arduino Digital Pin 5 (INPUT_PULLUP)
+- Pin 2 -> Breadboard (GND)
+
+4. TOUCH SENSOR (TTP223) [Space Delimiter Key]
+- VCC -> Breadboard (+5V)
+- GND -> Breadboard (GND)
+- SIG -> Arduino Digital Pin 2
+
+5. RED LED [Active Transmission & Error Indicator]
+- Anode (+)  -> 220 Ohm Resistor -> Arduino Digital Pin 8
+- Cathode (-) -> Breadboard (GND)
+
+6. GREEN LED [Ready State & Victory Indicator]
+- Anode (+)  -> 220 Ohm Resistor -> Arduino Digital Pin 9
+- Cathode (-) -> Breadboard (GND)
+
+7. ACTIVE BUZZER [Audio Feedback & Celebration Strobe]
+- Positive (+) -> Arduino Digital Pin 10
+- Negative (-) -> Breadboard (GND)
+=========================================================

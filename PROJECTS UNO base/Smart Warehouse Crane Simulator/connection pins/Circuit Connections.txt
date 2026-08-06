@@ -1,0 +1,36 @@
+Circuit Connections
+1. Joystick Module
+Joystick Pin	Arduino UNO
+VCC	5V
+GND	GND
+VRX	A0
+VRY	A1
+SW	D2
+2. Touch Sensor
+Touch Sensor	Arduino UNO
+VCC	5V
+GND	GND
+OUT (IO)	D3
+3. Red LED (Moving Indicator)
+LED Side	Connection
+Arduino D6	→ 220Ω Resistor
+Resistor	→ LED Anode (+)
+LED Cathode (-)	→ GND
+4. Green LED (Stop Indicator)
+LED Side	Connection
+Arduino D7	→ 220Ω Resistor
+Resistor	→ LED Anode (+)
+LED Cathode (-)	→ GND
+5. Active Buzzer
+Buzzer	Arduino
+Positive (+)	D8
+Negative (-)	GND
+6. Yellow LED (Task Result Indicator)
+LED Side	Connection
+Arduino D9	→ 220Ω Resistor
+Resistor	→ LED Anode (+)
+LED Cathode (-)	→ GND
+7. Push Button (Task Start/End)
+Push Button	Arduino
+One Terminal	D10
+Other Terminal	GND

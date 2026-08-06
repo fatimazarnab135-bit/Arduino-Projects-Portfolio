@@ -1,0 +1,58 @@
+# Industrial Two-Hand Safety Controller Prototype
+
+An industrial safety control system simulation built on an **Arduino Uno**. This prototype enforces strict two-hand operation and operator proximity verification before allowing machinery execution, preventing workplace accidents.
+
+---
+
+## Features & Working Logic
+
+* **Two-Hand Operation Interlock:** Requires simultaneous input from both a Touch Sensor and an Operation Push Button.
+* **Proximity Safety Enforcement (HC-SR04):** Operates only when the operator is within the safe zone (**Distance $\le$ 30 cm**).
+* **Emergency Cutoff System:** Supports an immediate Emergency Stop trigger (via Emergency Button / Joystick SW) that overrides all operations.
+* **Audiovisual Safety Telemetry:**
+  * **Safe Operation State (🟢 Green LED ON):** Touch = HIGH, Push Button = HIGH, Distance $\le$ 30 cm, Emergency = OFF.
+  * **Unsafe / Idle State (🔴 Red LED ON, 🔊 Buzzer ON):** Triggered if any safe condition is breached or Emergency Mode is latch-activated.
+
+---
+
+## Master Pin Mapping (Arduino Uno)
+
+### Configuration Option A: Standard Button Version
+| Component | Pin / Terminal | Connected To | Notes / Function |
+| :--- | :--- | :--- | :--- |
+| **Touch Sensor** | SIG | **Pin 13** | Hand Presence Input #1 |
+| **Work Button** | Output | **Pin 8** | Operation Button Input #2 (Pull-down) |
+| **Emergency Button** | Output | **Pin 9** | Emergency Stop Switch (Pull-up) |
+| **Ultrasonic (HC-SR04)** | TRIG / ECHO | **Pin 6** / **Pin 7** | Distance Monitoring Sensor |
+| **Red LED** | Anode (+) | **Pin 12** (via 220Ω) | Unsafe / Emergency Indicator |
+| **Green LED** | Anode (+) | **Pin 11** (via 220Ω) | Safe Operation Indicator |
+| **Buzzer** | Positive (+) | **Pin 10** | Alarm System |
+
+### Configuration Option B: Joystick SW Version
+| Component | Pin / Terminal | Connected To | Notes / Function |
+| :--- | :--- | :--- | :--- |
+| **Touch Sensor** | SIG | **Pin 2** | Hand Presence Input #1 |
+| **Work Button** | Output | **Pin 3** | Operation Button Input #2 |
+| **Joystick Switch (SW)** | SW Pin | **Pin 4** | Emergency Stop Switch (`INPUT_PULLUP`) |
+| **Ultrasonic (HC-SR04)** | TRIG / ECHO | **Pin 9** / **Pin 10** | Distance Monitoring Sensor |
+| **Green LED** | Anode (+) | **Pin 11** (via 220Ω) | Safe Operation Indicator |
+| **Buzzer** | Positive (+) | **Pin 12** | Alarm System |
+| **Red LED** | Anode (+) | **Pin 13** (via 220Ω) | Unsafe / Emergency Indicator |
+
+---
+
+## Circuit & Hardware Setup
+
+* Add your project hardware photos or video clips in the `assets/` sub-folder:
+  * `assets/circuit-diagram.png`
+  * `assets/working-demo.mp4`
+
+---
+
+## How to Run
+
+1. Open the project code file (`src/project_code.ino` or `.ino` file) in **Arduino IDE**.
+2. Connect your **Arduino Uno** to your computer via USB.
+3. Select board **Arduino Uno** and your correct **COM Port**.
+4. Click **Upload**.
+5. Open **Serial Monitor** at `9600` baud rate to inspect distance telemetry and safety interlock states.

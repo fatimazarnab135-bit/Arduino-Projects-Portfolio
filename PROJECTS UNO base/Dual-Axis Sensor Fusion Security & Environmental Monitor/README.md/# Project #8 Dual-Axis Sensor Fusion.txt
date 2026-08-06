@@ -1,0 +1,53 @@
+# Project #8: Dual-Axis Sensor Fusion Security & Environmental Monitor
+
+An embedded engineering project that integrates multiple sensory inputs using an **Arduino Uno** to create a dual-hazard detection system. It continuously monitors two distinct environmental conditions simultaneously: **Intrusion** and **Flood/Water Leakage**.
+
+---
+
+## Features & Working Logic
+
+* **Intrusion Detection (Ultrasonic Sensor):** Measures spatial proximity. Objects detected within **< 20 cm** trigger a security alert (Green LED + Pulsing Beep).
+* **Flood / Leak Detection (Soil Moisture Sensor):** Acts as an analog liquid detector. Water contact drops the analog reading below the threshold (`< 500`), triggering an emergency flood alert (Red LED + Rapid Beep).
+* **Critical Crisis Mode:** If both hazards occur concurrently, the system engages a high-priority alert (Dual LEDs + Strobe Alarm).
+* **Capacitive Manual Override (Touch Sensor):** Functions as a safety reset button to mute alarms or reset the alert state.
+
+---
+
+## Master Pin Mapping (Arduino Uno)
+
+### 1. Power Infrastructure
+| Component Line | Arduino Connection |
+| :--- | :--- |
+| Breadboard Red Line (+) | Arduino 5V |
+| Breadboard Blue/Black Line (-) | Arduino GND |
+
+### 2. Sensor & Actuator Connections
+
+| Component | Pin / Terminal | Connected To | Notes / Function |
+| :--- | :--- | :--- | :--- |
+| **Touch Sensor (TTP223)** | VCC / GND / SIG | 5V / GND / **Pin 2** | Mute / Safety Reset Button |
+| **Ultrasonic Sensor (HC-SR04)** | VCC / GND | 5V / GND | Intrusion Detection |
+| | TRIG | **Pin 3** | Trigger Output |
+| | ECHO | **Pin 4** | Echo Input |
+| **Soil Moisture Sensor** | VCC / GND / AO | 5V / GND / **Pin A0** | Water Leakage / Flood Detector |
+| **Red LED** | Anode (+) / Cathode (-) | **Pin 8** (via 220Ω) / GND | Water / Flood Alert |
+| **Green LED** | Anode (+) / Cathode (-) | **Pin 9** (via 220Ω) / GND | Intruder Alert |
+| **Active Buzzer** | Positive (+) / Negative (-) | **Pin 10** / GND | Multi-Tone Alarm System |
+
+---
+
+## Circuit & Hardware Setup
+
+* Add your project hardware photos or video clips in the `assets/` sub-folder:
+  * `assets/circuit-diagram.png`
+  * `assets/working-demo.mp4`
+
+---
+
+## How to Run
+
+1. Open the project code file (`src/project_code.ino` or `.ino` file) in **Arduino IDE**.
+2. Connect your **Arduino Uno** to your computer via USB.
+3. Select board **Arduino Uno** and your correct **COM Port**.
+4. Click **Upload**.
+5. Open **Serial Monitor** at `9600` baud rate to view real-time distance and moisture telemetry data.

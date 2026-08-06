@@ -1,0 +1,103 @@
+🔧 VERSION 1 (Joystick Emergency Switch)
+Pin Connections
+Component	Arduino Pin
+Touch Sensor	D2
+Push Button (Pull-down)	D3
+Joystick SW	D4
+Ultrasonic TRIG	D9
+Ultrasonic ECHO	D10
+Green LED	D11
+Buzzer	D12
+Red LED	D13
+Components Used
+Arduino UNO
+Breadboard
+Touch Sensor
+Push Button
+Joystick Module
+HC-SR04 Ultrasonic Sensor
+Green LED
+Red LED
+Active Buzzer
+220 Ω Resistors
+Jumper Wires
+🔧 VERSION 2 (Improved Emergency Button)
+Pin Connections
+🔴 Red LED
+Arduino Pin 12
+      │
+   220Ω Resistor
+      │
+Red LED (+)
+Red LED (-)
+      │
+     GND
+🟢 Green LED
+Arduino Pin 11
+      │
+   220Ω Resistor
+      │
+Green LED (+)
+Green LED (-)
+      │
+     GND
+🔊 Buzzer
+Arduino Pin 10
+      │
+Buzzer (+)
+Buzzer (-)
+      │
+     GND
+🚨 Emergency Button (Pull-Up Configuration)
+5V
+ │
+10kΩ Resistor
+ │
+Pin 9 -------- Push Button -------- GND
+
+Normally HIGH
+
+Press → LOW
+
+Press once → Emergency ON
+
+Press again → Emergency OFF
+
+✋ Operation Button (Pull-Down Configuration)
+5V
+ │
+Push Button
+ │
+Pin 8
+ │
+10kΩ Resistor
+ │
+GND
+
+Normally LOW
+
+Press → HIGH
+
+🤚 Touch Sensor
+Touch Sensor Pin	Arduino
+VCC	5V
+GND	GND
+OUT (IO)	D13
+📏 Ultrasonic Sensor (HC-SR04)
+Ultrasonic Pin	Arduino
+VCC	5V
+GND	GND
+TRIG	D6
+ECHO	D7
+Components Used
+Arduino UNO
+Breadboard
+Touch Sensor
+HC-SR04 Ultrasonic Sensor
+2 Push Buttons
+Green LED
+Red LED
+Active Buzzer
+Three 220 Ω Resistors (LEDs and, if desired, current limiting)
+Two 10 kΩ Resistors (Pull-up and Pull-down)
+Jumper Wires

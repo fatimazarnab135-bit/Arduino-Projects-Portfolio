@@ -1,0 +1,51 @@
+ARDUINO UNO PIN CONNECTIONS
+
+POWER RAILS (BREADBOARD)
+
+Arduino 5V -> Breadboard Red Line (+)
+
+Arduino GND -> Breadboard Blue/Black Line (-)
+
+ULTRASONIC SENSOR (HC-SR04)
+
+VCC  -> Breadboard (+)
+
+GND  -> Breadboard (-)
+
+TRIG -> Arduino Pin 3
+
+ECHO -> Arduino Pin 4
+
+SOIL MOISTURE SENSOR
+
+VCC -> Breadboard (+)
+
+GND -> Breadboard (-)
+
+AO  -> Arduino Pin A0
+
+TOUCH SENSOR
+
+VCC -> Breadboard (+)
+
+GND -> Breadboard (-)
+
+SIG -> Arduino Pin 2
+
+RED LED (Water Alert)
+
+Long Leg (+) -> 220 Ohm Resistor -> Arduino Pin 8
+
+Short Leg (-) -> Breadboard (-)
+
+GREEN LED (Intruder Alert)
+
+Long Leg (+) -> 220 Ohm Resistor -> Arduino Pin 9
+
+Short Leg (-) -> Breadboard (-)
+
+ACTIVE BUZZER
+
+Positive Pin (+) -> Arduino Pin 10
+
+Negative Pin (-) -> Breadboard (-)
